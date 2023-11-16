@@ -55,16 +55,18 @@ nav a:hover {
 }
 
 .portrait {
-    height: 600px;
-    width: 600px;
-    max-width: 70vw;
-    max-height: 70vw;
+    height: 500px;
+    width: 500px;
+    max-width: 25vw;
+    max-height: 25vw;
     overflow: hidden;
     border-radius: 50%;
-    border: solid 20px var(--mainColor);
+    border: solid 10px var(--mainColor);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 100px;
+    min-height: 100px
 }
 
 .portrait img {
@@ -148,26 +150,27 @@ h1 {
         font-size: 12vw;
     }
 
+    #display {
+        padding-top: 50px;
+    }
+
     .displayContainer {
         gap: 25px;
+
+    }
+
+    .portrait {
+        border: solid 8px var(--mainColor);
     }
 }
 
 @media (max-width: 550px) {
-    .portrait {
-        border: solid 10px var(--mainColor); 
-    }
-
     .displayContent p {
         font-size: 4vw;
     }
 }
 
 @media (max-width: 1020px) {
-    .displayContainer {
-        gap: 25px;
-    }
-
     .displayContent p {
         margin: 5px;
     }
