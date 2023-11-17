@@ -74,13 +74,14 @@ nav.sticky ul li a:hover {
 header {
     padding: 100px 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .headerText {
-    width: 950px;
+    width: 850px;
 }
 
 .portrait {
@@ -103,7 +104,7 @@ header {
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .subheader, .aboutText {
@@ -193,6 +194,7 @@ footer {
 
     header {
         padding: 50px;
+        text-align: center;
     }
 
     #about, footer {
@@ -229,16 +231,5 @@ footer {
 
     .displayContainer {
         gap: 25px;
-    }
-}
-
-@media (max-width: 1800px) {
-    header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .portrait {
-        margin-top: 50px;
     }
 }
