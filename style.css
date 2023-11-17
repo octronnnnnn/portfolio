@@ -22,6 +22,52 @@ body {
     color: var(--textColor);
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    display: flex;
+    padding: 1% 0; 
+    align-items: center;  
+    transition: 0.5s;
+}
+
+nav ul {  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-left: 100px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--sceondaryTextColor);
+}
+
+nav ul li a:hover {
+    color: var(--textColor);
+}
+
+nav.sticky {
+    background-color: var(--mainColor);
+}
+
+nav.sticky ul li a {
+    color: #15171C;
+}
+
+nav.sticky ul li a:hover {
+    color: var(--lightSecondaryColor);
+}
+
 header {
     padding: 100px;
     display: flex;
@@ -33,25 +79,6 @@ header {
 
 .headerText {
     width: 850px;
-}
-
-nav {
-    margin-bottom: 120px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--sceondaryTextColor);
-}
-
-nav a:hover {
-    color: var(--textColor);
 }
 
 .portrait {
@@ -131,14 +158,15 @@ h1 {
 
 @media (max-width: 800px) {
     nav {
-        margin-bottom: 75px;
-    }
-    
-    ul {
         justify-content: center;
     }
+
+    nav ul {
+        margin-left: 0;
+    }
+
     nav a {
-        font-size: 4vw;
+        font-size: calc(18px +1.5vw);
     }
 
     header {
@@ -165,8 +193,12 @@ h1 {
 }
 
 @media (max-width: 550px) {
+    nav a {
+        font-size: calc(12px + 0.9vw);
+    }
+
     .displayContent p {
-        font-size: 4vw;
+        font-size: 8px;
     }
 }
 
