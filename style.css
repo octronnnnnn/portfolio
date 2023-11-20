@@ -26,9 +26,8 @@ body {
 nav {
     position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     width: 100vw;
-    margin-left: -50vw;
     display: flex;
     padding: 2% 0; 
     align-items: center;  
@@ -40,8 +39,8 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
-    margin-left: 200px;
+    gap: 50px;
+    padding-left: 200px;
 }
 
 nav ul li {
@@ -59,7 +58,7 @@ nav ul li a:hover {
 
 nav.sticky {
     background-color: var(--mainColor);
-    padding: 1%;
+    padding: 0.7% 0;
 }
 
 nav.sticky ul li a {
@@ -121,7 +120,7 @@ h1 {
     align-items: center;
 }
 
-#display {
+#overview {
     padding: 100px 0;
     background-color: var(--primaryColor);
     display: flex;
@@ -130,11 +129,11 @@ h1 {
     align-items: center;
 }
 
-#display h2 {
+#overview h2 {
     margin-bottom: 25px;
 }
 
-.displayContainer {
+.overviewContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +141,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.displayContent {
+.overviewContent {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -153,14 +152,15 @@ h1 {
     color: var(--sceondaryTextColor);
 }
 
-.displayContent img {
+.overviewContent img {
     width: 100%;
     max-width: 250px;
     max-height: 250px;
     border: solid 10px var(--mainColor);
+    /* border-radius: 50%; */
 }
 
-.displayContent p {
+.overviewContent p {
     margin: 10px;
 }
 
@@ -186,6 +186,8 @@ footer {
 
     nav ul {
         margin-left: 0;
+        gap: 50px;
+        padding-left: 0;
     }
 
     nav a {
@@ -202,10 +204,11 @@ footer {
     }
 
     h1 {
-        font-size: 12vw;
+        font-size: calc(40px + 0.9vw);
+        margin-top: 25px;
     }
 
-    #display {
+    #overview {
         padding-top: 50px;
     }
 
@@ -215,21 +218,37 @@ footer {
 }
 
 @media (max-width: 550px) {
+    nav ul {
+        gap: 25px;
+    }
+
     nav a {
         font-size: calc(12px + 0.9vw);
     }
 
-    .displayContent p {
+    .overviewContent p {
         font-size: calc(12px + 0.9vw);
     }
 }
 
 @media (max-width: 1020px) {
-    .displayContent p {
+       h1 {
+            font-size: calc(40px + 0.9vw);
+        }
+
+    .overviewContent p {
         margin: 5px;
     }
 
-    .displayContainer {
+    .overviewContainer {
         gap: 25px;
     }
+}
+
+#home {
+    opacity: 0;
+}
+
+#home.show {
+    opacity: 1;
 }
